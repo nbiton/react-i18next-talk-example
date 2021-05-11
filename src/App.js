@@ -1,9 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import { useTranslation } from "react-i18next";
+import {useCallback} from "react";
 
 function App() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = useCallback(() => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'he' : 'en');
+  }, [i18n.language]);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +25,8 @@ function App() {
         >
           {t('learnReact')}
         </a>
+
+        <button onClick={changeLanguage}>{t('changeLang')}</button>
       </header>
     </div>
   );
