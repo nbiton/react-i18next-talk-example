@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import {useCallback} from "react";
 
 function App() {
@@ -9,13 +9,15 @@ function App() {
   const changeLanguage = useCallback(() => {
     i18n.changeLanguage(i18n.language === 'en' ? 'he' : 'en');
   }, [i18n.language]);
-
+  const fileName = 'src/App.js'
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <Trans i18nKey='mainInstruction'>
+            Edit <code>{{fileName}}</code> and save to <strong>reload.</strong>
+          </Trans>
         </p>
         <a
           className="App-link"

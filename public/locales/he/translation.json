@@ -1,4 +1,5 @@
 {
   "learnReact": "למד ריאקט",
-  "changeLang": "Change to English"
+  "changeLang": "Change to English",
+  "mainInstruction": "ערוך את <1>{{fileName}}</1> ושמור כדי <3>לטעון מחדש</3>"
 }

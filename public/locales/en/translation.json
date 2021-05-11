@@ -1,4 +1,5 @@
 {
   "learnReact": "Learn React!",
-  "changeLang": "שנה לעברית"
+  "changeLang": "שנה לעברית",
+  "mainInstruction": "Edit <1>{{fileName}}</1> and save to <3>reload.</3>"
 }
